@@ -1,0 +1,13 @@
+git status -> prints the status of Git Repository.
+git init -> initializes the Git Repository.
+git config --global user.name "rahulkevin"  -> Specify username
+git config --global user.email rahul.rahul.8118@gmail.com
+git config user.name "rahulkevin"
+git config user.email rahul.rahul.8118@gmail.com
+git add <filename> or *
+git commit -m ""
+git log
+git diff <filename>
+
+
+GitHub Repository is also known as Remote repository
