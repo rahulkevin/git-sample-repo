@@ -9,5 +9,6 @@ git commit -m ""
 git log
 git diff <filename>
 
+Token classic: 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
 
 GitHub Repository is also known as Remote repository
