@@ -1,13 +1,42 @@
-git status -> prints the status of Git Repository.
-git init -> initializes the Git Repository.
-git config --global user.name "rahulkevin"
-git config --global user.email rahul.rahul.8118@gmail.com
-git config user.name "rahulkevin"
-git config user.email rahul.rahul.8118@gmail.com
-git add <filename> or *
-git commit -m ""
-git log
-git diff <filename>
-
+---------------------------------------------------GIT Commands-------------------------------------------------------
+1) git status 						     -> prints the status of Git Repository.
+2) git init 						     -> initializes the Git Repository.
+3) git config --global user.name "rahulkevin"  		     -> Specify Username globally
+4) git config --global user.email rahul.rahul.8118@gmail.com -> Specify Email globally
+5) git config user.name "rahulkevin"  			     -> Specify Username for particular repository
+6) git config user.email rahul.rahul.8118@gmail.com  	     -> Specify Email for particular repository
+7) git add <filename> or *   				     -> Add file to staging environment
+8) git commit -m ""     				     -> Commit file to local Git Repository
+9) git log    						     -> Check file log history
+10) git diff <filename>   				     ->Check changes made to file with existing file
+11) git remote add origin <GitHub Repository URL>   	     -> Establish connection to the remote GitHub Repoistory
+git remote add origin https://github.com/rahulkevin/git-sample-repo
+12) git push origin master   				     -> Push to master branch
+13) git pull  						     -> Pull from master branch
+----------------------------------------------------------------------------------------------------------------------
 
 GitHub Repository is also known as Remote repository
+
+
+E:\Rahul\git-tutorial\git-sample-repo>git branch -a
+* master
+  remotes/origin/master
+
+E:\Rahul\git-tutorial\git-sample-repo>git branch -r
+  origin/master
+
+E:\Rahul\git-tutorial\git-sample-repo>git branch
+* master
+
+E:\Rahul\git-tutorial\git-sample-repo>git remote show origin
+* remote origin
+  Fetch URL: https://github.com/rahulkevin/git-sample-repo.git
+  Push  URL: https://github.com/rahulkevin/git-sample-repo.git
+  HEAD branch: master
+  Remote branch:
+    master tracked
+  Local branch configured for 'git pull':
+    master merges with remote master
+  Local ref configured for 'git push':
+    master pushes to master (up to date)
+
