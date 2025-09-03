@@ -9,7 +9,8 @@
 8) git commit -m ""     				     -> Commit file to local Git Repository
 9) git log    						     -> Check file log history
 10) git diff <filename>   				     ->Check changes made to file with existing file
-11) get remote add origin <GitHub Repository URL>   	     -> Establish connection to the remote GitHub Repoistory
+11) git remote add origin <GitHub Repository URL>   	     -> Establish connection to the remote GitHub Repoistory
+git remote add origin https://github.com/rahulkevin/git-sample-repo
 12) git push origin master   				     -> Push to master branch
 13) git pull  						     -> Pull from master branch
 ----------------------------------------------------------------------------------------------------------------------
