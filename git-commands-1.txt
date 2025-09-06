@@ -42,6 +42,118 @@ E:\Rahul\git-tutorial\git-sample-repo>git remote show origin
   Local ref configured for 'git push':
     master pushes to master (up to date)
 
+E:\Rahul\git-tutorial\git-sample-repo>git checkout -b privatebranch1   #We use only first time this command when need to create the privatebranch
+Switched to a new branch 'privatebranch1'
+
+E:\Rahul\git-tutorial\git-sample-repo>git checkout -b privatebranch2
+Switched to a new branch 'privatebranch2'
+
+E:\Rahul\git-tutorial\git-sample-repo>git checkout privatebranch1
+M       git-commands-1.txt
+Switched to branch 'privatebranch1'
+
+E:\Rahul\git-tutorial\git-sample-repo>git status
+On branch privatebranch1
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   git-commands-1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+E:\Rahul\git-tutorial\git-sample-repo>git add *
+
+E:\Rahul\git-tutorial\git-sample-repo>git commit -m "Added branch scenarios 1 and 2"
+[privatebranch1 48ec301] Added branch scenarios 1 and 2
+ 1 file changed, 24 insertions(+)
+
+E:\Rahul\git-tutorial\git-sample-repo>git push origin privatebranch1		# this step will switch the branch to privatebranch1
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 631 bytes | 315.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'privatebranch1' on GitHub by visiting:
+remote:      https://github.com/rahulkevin/git-sample-repo/pull/new/privatebranch1
+remote:
+To https://github.com/rahulkevin/git-sample-repo.git
+ * [new branch]      privatebranch1 -> privatebranch1
+
+E:\Rahul\git-tutorial\git-sample-repo>git checkout privatebranch2		# this step will switch the branch to privatebranch2
+Switched to branch 'privatebranch2'
+
+E:\Rahul\git-tutorial\git-sample-repo>git status
+On branch privatebranch2
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   git-commands-1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+E:\Rahul\git-tutorial\git-sample-repo>git add *
+
+E:\Rahul\git-tutorial\git-sample-repo>git commit -m "Added branch scenarios 3"
+[privatebranch2 62bcae8] Added branch scenarios 3
+ 1 file changed, 68 insertions(+)
+
+E:\Rahul\git-tutorial\git-sample-repo>git push origin privatebranch2
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 519 bytes | 519.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'privatebranch2' on GitHub by visiting:
+remote:      https://github.com/rahulkevin/git-sample-repo/pull/new/privatebranch2
+remote:
+To https://github.com/rahulkevin/git-sample-repo.git
+ * [new branch]      privatebranch2 -> privatebranch2
+
+E:\Rahul\git-tutorial\git-sample-repo>git checkout master		# this step will switch the barnch to master branch
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+E:\Rahul\git-tutorial\git-sample-repo>git branch
+* master
+  privatebranch1
+  privatebranch2
+
+E:\Rahul\git-tutorial\git-sample-repo>git pull origin master		# this step will pull the data of master branch
+From https://github.com/rahulkevin/git-sample-repo
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+
+E:\Rahul\git-tutorial\git-sample-repo>git merge privatebranch1		# this step merge the data of privatebranch1 to master branch
+Updating 1f62698..48ec301
+Fast-forward
+ git-commands-1.txt | 24 ++++++++++++++++++++++++
+ 1 file changed, 24 insertions(+)
+
+E:\Rahul\git-tutorial\git-sample-repo>git push origin master    	# this step push the data of privatebranch1 to master branch
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/rahulkevin/git-sample-repo.git
+   1f62698..48ec301  master -> master
+
+E:\Rahul\git-tutorial\git-sample-repo>git checkout privatebranch2	# this step will switch the branch to privatebranch2
+Switched to branch 'privatebranch2'
+
+E:\Rahul\git-tutorial\git-sample-repo>git pull origin master		# this step will pull the data of master branch
+From https://github.com/rahulkevin/git-sample-repo
+ * branch            master     -> FETCH_HEAD
+Auto-merging git-commands-1.txt
+CONFLICT (content): Merge conflict in git-commands-1.txt		# merge is failed because privatebranch1 data is already present in master branch
+Automatic merge failed; fix conflicts and then commit the result.	# so master branch is confused where to add privatebranch2 data in master branch
+									# open the file and adjust the data properly and save it
+
+
+
+
 ----------------------------------------------------------------------------------------------------------------------
 
 Scenario 1:
@@ -65,4 +177,18 @@ testmethod1() -> getName()
 
 Person A -> Merge code to master
 Person B -> Pull from master to private branch, modify testcode based on new framework code which is done by Person A, merge code to master branch
+>>>>>>> 48ec30174d37a605d095179c70034c56f34ebce6
+
+Scenario 3:
+1 Person -> Two different features
+Work on different branches
+
+		   PrivateBranch1-------------------------
+		   |					 |
+		   |					 |
+		   |					 |
+-----------------Master-----------Release1--------------Master------------------Master--------------Release2----------Master----------
+		  |								|
+		  |								|Pull code from master and then merge his code to master
+		  PrivateBranch2-------------------------------------------------
 
