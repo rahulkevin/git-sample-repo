@@ -42,6 +42,10 @@ E:\Rahul\git-tutorial\git-sample-repo>git remote show origin
   Local ref configured for 'git push':
     master pushes to master (up to date)
 
+
+# Create two branch and merge that branch on master branch by two diiferent ways (using command line and GIT website UI)
+
+
 E:\Rahul\git-tutorial\git-sample-repo>git checkout -b privatebranch1   #We use only first time this command when need to create the privatebranch
 Switched to a new branch 'privatebranch1'
 
