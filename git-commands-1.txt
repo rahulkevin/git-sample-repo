@@ -42,3 +42,27 @@ E:\Rahul\git-tutorial\git-sample-repo>git remote show origin
   Local ref configured for 'git push':
     master pushes to master (up to date)
 
+----------------------------------------------------------------------------------------------------------------------
+
+Scenario 1:
+First Release -> Done
+Second Release
+	2 features
+	2 People
+Third Release
+	1 Feature
+	1 Person
+
+Create every differnt branch for every person, when work is done then merge the branch (of the person) to master branch then release
+
+Scenario 2:
+Two People
+
+Person A -> Enhance the framework
+Person B -> Automating testcases
+
+testmethod1() -> getName()
+
+Person A -> Merge code to master
+Person B -> Pull from master to private branch, modify testcode based on new framework code which is done by Person A, merge code to master branch
+
