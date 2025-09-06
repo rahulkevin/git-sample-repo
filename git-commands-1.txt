@@ -42,3 +42,71 @@ E:\Rahul\git-tutorial\git-sample-repo>git remote show origin
   Local ref configured for 'git push':
     master pushes to master (up to date)
 
+----------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Scenario 3:
+1 Person -> Two different features
+Work on different branches
+
+		   PrivateBranch1-------------------------
+		   |					 |
+		   |					 |
+		   |					 |
+-----------------Master-----------Release1--------------Master------------------Master--------------Release2----------Master----------
+		  |								|
+		  |								|Pull code from master and then merge his code to master
+		  PrivateBranch2-------------------------------------------------
+
+
