@@ -152,9 +152,63 @@ Automatic merge failed; fix conflicts and then commit the result.	# so master br
 									# open the file and adjust the data properly and save it
 
 
+E:\Rahul\git-tutorial\git-sample-repo>git branch
+  master
+  privatebranch1
+* privatebranch2
 
+E:\Rahul\git-tutorial\git-sample-repo>git status
+On branch privatebranch2
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
 
-----------------------------------------------------------------------------------------------------------------------
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   git-commands-1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+E:\Rahul\git-tutorial\git-sample-repo>git add *
+
+E:\Rahul\git-tutorial\git-sample-repo>git commit -m "Resolved merge conflicts"
+[privatebranch2 c3effd2] Resolved merge conflicts
+
+E:\Rahul\git-tutorial\git-sample-repo>git push origin privatebranch2
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 2.33 KiB | 2.33 MiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/rahulkevin/git-sample-repo.git
+   62bcae8..c3effd2  privatebranch2 -> privatebranch2
+
+E:\Rahul\git-tutorial\git-sample-repo>git branch
+* master
+  privatebranch1
+  privatebranch2
+
+E:\Rahul\git-tutorial\git-sample-repo>git pull origin master
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (1/1), 897 bytes | 224.00 KiB/s, done.
+From https://github.com/rahulkevin/git-sample-repo
+ * branch            master     -> FETCH_HEAD
+   48ec301..33ebfc9  master     -> origin/master
+Updating 48ec301..33ebfc9
+Fast-forward
+ git-commands-1.txt | 126 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 126 insertions(+)
+
+E:\Rahul\git-tutorial\git-sample-repo>git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+--------------------------------------------------------------------------------------------------------------------------------------
 
 Scenario 1:
 First Release -> Done
@@ -191,4 +245,6 @@ Work on different branches
 		  |								|
 		  |								|Pull code from master and then merge his code to master
 		  PrivateBranch2-------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------------------------------------------
 
