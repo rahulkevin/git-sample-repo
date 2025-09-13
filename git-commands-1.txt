@@ -43,7 +43,7 @@ E:\Rahul\git-tutorial\git-sample-repo>git remote show origin
     master pushes to master (up to date)
 
 
-# Create two branch and merge that branch on master branch by two diiferent ways (using command line and GIT website UI)
+# Create two branch and merge that branch on master branch by two different ways (using command line and GIT website UI)
 
 
 E:\Rahul\git-tutorial\git-sample-repo>git checkout -b privatebranch1   #We use only first time this command when need to create the privatebranch
@@ -52,7 +52,7 @@ Switched to a new branch 'privatebranch1'
 E:\Rahul\git-tutorial\git-sample-repo>git checkout -b privatebranch2
 Switched to a new branch 'privatebranch2'
 
-E:\Rahul\git-tutorial\git-sample-repo>git checkout privatebranch1
+E:\Rahul\git-tutorial\git-sample-repo>git checkout privatebranch1		# this step will switch the branch to privatebranch1
 M       git-commands-1.txt
 Switched to branch 'privatebranch1'
 
@@ -71,7 +71,7 @@ E:\Rahul\git-tutorial\git-sample-repo>git commit -m "Added branch scenarios 1 an
 [privatebranch1 48ec301] Added branch scenarios 1 and 2
  1 file changed, 24 insertions(+)
 
-E:\Rahul\git-tutorial\git-sample-repo>git push origin privatebranch1		# this step will switch the branch to privatebranch1
+E:\Rahul\git-tutorial\git-sample-repo>git push origin privatebranch1
 Enumerating objects: 5, done.
 Counting objects: 100% (5/5), done.
 Delta compression using up to 8 threads
@@ -119,7 +119,7 @@ remote:
 To https://github.com/rahulkevin/git-sample-repo.git
  * [new branch]      privatebranch2 -> privatebranch2
 
-E:\Rahul\git-tutorial\git-sample-repo>git checkout master		# this step will switch the barnch to master branch
+E:\Rahul\git-tutorial\git-sample-repo>git checkout master		# this step will switch the branch to master branch
 Switched to branch 'master'
 Your branch is up to date with 'origin/master'.
 
@@ -223,7 +223,7 @@ Third Release
 	1 Feature
 	1 Person
 
-Create every differnt branch for every person, when work is done then merge the branch (of the person) to master branch then release
+Create every different branch for every person, when work is done then merge the branch (of the person) to master branch then release
 
 Scenario 2:
 Two People

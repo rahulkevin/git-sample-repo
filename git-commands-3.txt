@@ -1,0 +1,395 @@
+----------------------------------------------------------------
+GitHub Project Check-in and Git Clone
+----------------------------------------------------------------
+
+C:\Users\kumar>E:
+
+E:\>cd E:\Rahul\git-tutorial\git-sample-repo
+
+E:\Rahul\git-tutorial\git-sample-repo>dir
+ Volume in drive E is New Volume
+ Volume Serial Number is E283-36BE
+
+ Directory of E:\Rahul\git-tutorial\git-sample-repo
+
+06-09-2025  10.57 PM    <DIR>          .
+06-09-2025  10.57 PM    <DIR>          ..
+06-09-2025  11.05 PM            10,707 git-commands-1.txt
+25-08-2025  08.41 PM               437 git-commands-2.txt
+               2 File(s)         11,144 bytes
+               2 Dir(s)  36,063,006,720 bytes free
+
+E:\Rahul\git-tutorial\git-sample-repo>C:
+
+C:\Users\kumar>cd PycharmProjects\letskodeit
+
+C:\Users\kumar\PycharmProjects\letskodeit>dir
+ Volume in drive C is Windows
+ Volume Serial Number is 6E04-21A3
+
+ Directory of C:\Users\kumar\PycharmProjects\letskodeit
+
+21-08-2025  07.23 PM    <DIR>          .
+21-08-2025  07.23 PM    <DIR>          ..
+21-08-2025  05.50 PM    <DIR>          .idea
+22-07-2025  09.41 PM    <DIR>          .pytest_cache
+21-08-2025  05.27 PM    <DIR>          .venv
+21-08-2025  07.23 PM           150,663 automation.log
+20-08-2025  06.08 PM    <DIR>          base
+26-05-2025  07.19 PM    <DIR>          configfiles
+26-06-2025  11.33 PM    <DIR>          pages
+18-08-2025  12.13 AM    <DIR>          screenshots
+21-08-2025  05.35 PM               139 testdata.csv
+19-08-2025  11.41 PM    <DIR>          tests
+11-08-2025  11.19 PM    <DIR>          utilities
+               2 File(s)        150,802 bytes
+              11 Dir(s)  69,907,431,424 bytes free
+
+C:\Users\kumar\PycharmProjects\letskodeit>git status
+fatal: not a git repository (or any of the parent directories): .git
+
+C:\Users\kumar\PycharmProjects\letskodeit>git init
+Initialized empty Git repository in C:/Users/kumar/PycharmProjects/letskodeit/.git/
+
+C:\Users\kumar\PycharmProjects\letskodeit>git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .idea/
+        automation.log
+        base/
+        configfiles/
+        pages/
+        screenshots/
+        testdata.csv
+        tests/
+        utilities/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\kumar\PycharmProjects\letskodeit>ren gitignore.txt .gitignore
+
+C:\Users\kumar\PycharmProjects\letskodeit>open .gitignore
+'open' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kumar\PycharmProjects\letskodeit>git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        base/
+        configfiles/
+        pages/
+        screenshots/
+        testdata.csv
+        tests/
+        utilities/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\kumar\PycharmProjects\letskodeit>git add --all
+
+C:\Users\kumar\PycharmProjects\letskodeit>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   .gitignore
+        new file:   base/__init__.py
+        new file:   base/__pycache__/__init__.cpython-313.pyc
+        new file:   base/__pycache__/basepage.cpython-313.pyc
+        new file:   base/__pycache__/selenium_driver.cpython-313.pyc
+        new file:   base/__pycache__/webdriverfactory.cpython-313.pyc
+        new file:   base/basepage.py
+        new file:   base/selenium_driver.py
+        new file:   base/webdriverfactory.py
+        new file:   configfiles/__init__.py
+        new file:   pages/__init__.py
+        new file:   pages/__pycache__/__init__.cpython-313.pyc
+        new file:   pages/courses/__init__.py
+        new file:   pages/courses/__pycache__/__init__.cpython-313.pyc
+        new file:   pages/courses/__pycache__/register_courses_pages.cpython-313.pyc
+        new file:   pages/courses/register_courses_pages.py
+        new file:   pages/home/__init__.py
+        new file:   pages/home/__pycache__/__init__.cpython-313.pyc
+        new file:   pages/home/__pycache__/login_page.cpython-313.pyc
+        new file:   pages/home/__pycache__/navigation_page.cpython-313.pyc
+        new file:   pages/home/login_page.py
+        new file:   pages/home/navigation_page.py
+        new file:   screenshots/Credit card number is wrong.1752934925361.png
+        new file:   screenshots/Credit card number is wrong.1753115392994.png
+        new file:   screenshots/Credit card number is wrong.1753115544203.png
+        new file:   screenshots/Credit card number is wrong.1753116372618.png
+        new file:   screenshots/Credit card number is wrong.1753165365919.png
+        new file:   screenshots/Credit card number is wrong.1753165602719.png
+        new file:   screenshots/Credit card number is wrong.1753897655343.png
+        new file:   screenshots/Credit card number is wrong.1753898008012.png
+        new file:   screenshots/Credit card number is wrong.1753898760838.png
+        new file:   screenshots/Credit card number is wrong.1753899238838.png
+        new file:   screenshots/Credit card number is wrong.1753900345289.png
+        new file:   screenshots/Credit card number is wrong.1753900468744.png
+        new file:   screenshots/Enrollment Failed Verification.1752934925532.png
+        new file:   screenshots/Title of webpage is incorrect.1749667764191.png
+        new file:   screenshots/Title of webpage is incorrect.1750099678314.png
+        new file:   screenshots/Title of webpage is incorrect.1754934623378.png
+        new file:   screenshots/Title of webpage is incorrect.1755456203765.png
+        new file:   testdata.csv
+        new file:   tests/__init__.py
+        new file:   tests/__pycache__/__init__.cpython-313.pyc
+        new file:   tests/__pycache__/conftest.cpython-313-pytest-8.3.5.pyc
+        new file:   tests/__pycache__/conftest.cpython-313-pytest-8.4.0.pyc
+        new file:   tests/__pycache__/conftest.cpython-313-pytest-8.4.1.pyc
+        new file:   tests/__pycache__/test_suite_demo.cpython-313-pytest-8.3.5.pyc
+        new file:   tests/__pycache__/test_suite_demo.cpython-313-pytest-8.4.1.pyc
+        new file:   tests/conftest.py
+        new file:   tests/courses/__init__.py
+        new file:   tests/courses/__pycache__/__init__.cpython-313.pyc
+        new file:   tests/courses/__pycache__/register_courses_csv_data.cpython-313-pytest-8.3.5.pyc
+        new file:   tests/courses/__pycache__/register_courses_csv_data_tests.cpython-313-pytest-8.4.1.pyc
+        new file:   tests/courses/__pycache__/register_courses_csv_data_tests.cpython-313.pyc
+        new file:   tests/courses/__pycache__/register_courses_multiple_data_set_tests.cpython-313-pytest-8.3.5.pyc
+        new file:   tests/courses/__pycache__/register_courses_multiple_data_set_tests.cpython-313-pytest-8.4.1.pyc
+        new file:   tests/courses/__pycache__/register_courses_tests.cpython-313-pytest-8.3.5.pyc
+        new file:   tests/courses/__pycache__/register_courses_tests.cpython-313-pytest-8.4.1.pyc
+        new file:   tests/courses/register_courses_csv_data_tests.py
+        new file:   tests/courses/register_courses_multiple_data_set_tests.py
+        new file:   tests/courses/register_courses_tests.py
+        new file:   tests/home/__init__.py
+        new file:   tests/home/__pycache__/__init__.cpython-313.pyc
+        new file:   tests/home/__pycache__/login_tests.cpython-313-pytest-8.3.5.pyc
+        new file:   tests/home/__pycache__/login_tests.cpython-313-pytest-8.4.0.pyc
+        new file:   tests/home/__pycache__/login_tests.cpython-313-pytest-8.4.1.pyc
+        new file:   tests/home/__pycache__/login_tests.cpython-313.pyc
+        new file:   tests/home/login_tests.py
+        new file:   tests/test_suite_demo.py
+        new file:   utilities/__init__.py
+        new file:   utilities/__pycache__/__init__.cpython-313.pyc
+        new file:   utilities/__pycache__/custom_logger.cpython-313.pyc
+        new file:   utilities/__pycache__/read_data.cpython-313.pyc
+        new file:   utilities/__pycache__/teststatus.cpython-313.pyc
+        new file:   utilities/__pycache__/util.cpython-313.pyc
+        new file:   utilities/custom_logger.py
+        new file:   utilities/read_data.py
+        new file:   utilities/teststatus.py
+        new file:   utilities/util.py
+
+
+C:\Users\kumar\PycharmProjects\letskodeit>git reset
+
+C:\Users\kumar\PycharmProjects\letskodeit>git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        base/
+        configfiles/
+        pages/
+        screenshots/
+        testdata.csv
+        tests/
+        utilities/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+--------------------------------------------------------------------------------------------------
+#Then create a gitignore.txt file then add the folder/file name which you want to ignore for Git commit
+#At last rename that file to .gitignore
+---------------------------------------------
+
+C:\Users\kumar\PycharmProjects\letskodeit>ren .gitignore gitignore.txt
+
+C:\Users\kumar\PycharmProjects\letskodeit>ren gitignore.txt .gitignore
+
+C:\Users\kumar\PycharmProjects\letskodeit>cd base
+
+C:\Users\kumar\PycharmProjects\letskodeit\base>git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ../.gitignore
+        ./
+        ../configfiles/
+        ../pages/
+        ../screenshots/
+        ../testdata.csv
+        ../tests/
+        ../utilities/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\kumar\PycharmProjects\letskodeit\base>cd ..
+
+C:\Users\kumar\PycharmProjects\letskodeit>git add --all
+
+C:\Users\kumar\PycharmProjects\letskodeit>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   .gitignore
+        new file:   base/__init__.py
+        new file:   base/basepage.py
+        new file:   base/selenium_driver.py
+        new file:   base/webdriverfactory.py
+        new file:   configfiles/__init__.py
+        new file:   pages/__init__.py
+        new file:   pages/courses/__init__.py
+        new file:   pages/courses/register_courses_pages.py
+        new file:   pages/home/__init__.py
+        new file:   pages/home/login_page.py
+        new file:   pages/home/navigation_page.py
+        new file:   screenshots/Credit card number is wrong.1752934925361.png
+        new file:   screenshots/Credit card number is wrong.1753115392994.png
+        new file:   screenshots/Credit card number is wrong.1753115544203.png
+        new file:   screenshots/Credit card number is wrong.1753116372618.png
+        new file:   screenshots/Credit card number is wrong.1753165365919.png
+        new file:   screenshots/Credit card number is wrong.1753165602719.png
+        new file:   screenshots/Credit card number is wrong.1753897655343.png
+        new file:   screenshots/Credit card number is wrong.1753898008012.png
+        new file:   screenshots/Credit card number is wrong.1753898760838.png
+        new file:   screenshots/Credit card number is wrong.1753899238838.png
+        new file:   screenshots/Credit card number is wrong.1753900345289.png
+        new file:   screenshots/Credit card number is wrong.1753900468744.png
+        new file:   screenshots/Enrollment Failed Verification.1752934925532.png
+        new file:   screenshots/Title of webpage is incorrect.1749667764191.png
+        new file:   screenshots/Title of webpage is incorrect.1750099678314.png
+        new file:   screenshots/Title of webpage is incorrect.1754934623378.png
+        new file:   screenshots/Title of webpage is incorrect.1755456203765.png
+        new file:   testdata.csv
+        new file:   tests/__init__.py
+        new file:   tests/conftest.py
+        new file:   tests/courses/__init__.py
+        new file:   tests/courses/register_courses_csv_data_tests.py
+        new file:   tests/courses/register_courses_multiple_data_set_tests.py
+        new file:   tests/courses/register_courses_tests.py
+        new file:   tests/home/__init__.py
+        new file:   tests/home/login_tests.py
+        new file:   tests/test_suite_demo.py
+        new file:   utilities/__init__.py
+        new file:   utilities/custom_logger.py
+        new file:   utilities/read_data.py
+        new file:   utilities/teststatus.py
+        new file:   utilities/util.py
+
+
+C:\Users\kumar\PycharmProjects\letskodeit>git commit -m "Framework Code Checkin"
+[master (root-commit) c95d5a7] Framework Code Checkin
+ 44 files changed, 1261 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 base/__init__.py
+ create mode 100644 base/basepage.py
+ create mode 100644 base/selenium_driver.py
+ create mode 100644 base/webdriverfactory.py
+ create mode 100644 configfiles/__init__.py
+ create mode 100644 pages/__init__.py
+ create mode 100644 pages/courses/__init__.py
+ create mode 100644 pages/courses/register_courses_pages.py
+ create mode 100644 pages/home/__init__.py
+ create mode 100644 pages/home/login_page.py
+ create mode 100644 pages/home/navigation_page.py
+ create mode 100644 screenshots/Credit card number is wrong.1752934925361.png
+ create mode 100644 screenshots/Credit card number is wrong.1753115392994.png
+ create mode 100644 screenshots/Credit card number is wrong.1753115544203.png
+ create mode 100644 screenshots/Credit card number is wrong.1753116372618.png
+ create mode 100644 screenshots/Credit card number is wrong.1753165365919.png
+ create mode 100644 screenshots/Credit card number is wrong.1753165602719.png
+ create mode 100644 screenshots/Credit card number is wrong.1753897655343.png
+ create mode 100644 screenshots/Credit card number is wrong.1753898008012.png
+ create mode 100644 screenshots/Credit card number is wrong.1753898760838.png
+ create mode 100644 screenshots/Credit card number is wrong.1753899238838.png
+ create mode 100644 screenshots/Credit card number is wrong.1753900345289.png
+ create mode 100644 screenshots/Credit card number is wrong.1753900468744.png
+ create mode 100644 screenshots/Enrollment Failed Verification.1752934925532.png
+ create mode 100644 screenshots/Title of webpage is incorrect.1749667764191.png
+ create mode 100644 screenshots/Title of webpage is incorrect.1750099678314.png
+ create mode 100644 screenshots/Title of webpage is incorrect.1754934623378.png
+ create mode 100644 screenshots/Title of webpage is incorrect.1755456203765.png
+ create mode 100644 testdata.csv
+ create mode 100644 tests/__init__.py
+ create mode 100644 tests/conftest.py
+ create mode 100644 tests/courses/__init__.py
+ create mode 100644 tests/courses/register_courses_csv_data_tests.py
+ create mode 100644 tests/courses/register_courses_multiple_data_set_tests.py
+ create mode 100644 tests/courses/register_courses_tests.py
+ create mode 100644 tests/home/__init__.py
+ create mode 100644 tests/home/login_tests.py
+ create mode 100644 tests/test_suite_demo.py
+ create mode 100644 utilities/__init__.py
+ create mode 100644 utilities/custom_logger.py
+ create mode 100644 utilities/read_data.py
+ create mode 100644 utilities/teststatus.py
+ create mode 100644 utilities/util.py
+
+C:\Users\kumar\PycharmProjects\letskodeit>git status
+On branch master
+nothing to commit, working tree clean
+
+C:\Users\kumar\PycharmProjects\letskodeit>git branch
+* master
+
+C:\Users\kumar\PycharmProjects\letskodeit>git remote add origin https://github.com/rahulkevin/selenium-python-framework.git
+
+C:\Users\kumar\PycharmProjects\letskodeit>git push -u origin master
+Enumerating objects: 41, done.
+Counting objects: 100% (41/41), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (38/38), done.
+Writing objects: 100% (41/41), 316.27 KiB | 7.03 MiB/s, done.
+Total 41 (delta 5), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (5/5), done.
+To https://github.com/rahulkevin/selenium-python-framework.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+C:\Users\kumar\PycharmProjects\letskodeit>E:
+
+E:\Rahul\git-tutorial\git-sample-repo>cd ..
+
+E:\Rahul\git-tutorial>git clone https://github.com/rahulkevin/selenium-python-framework.git
+Cloning into 'selenium-python-framework'...
+remote: Enumerating objects: 41, done.
+remote: Counting objects: 100% (41/41), done.
+remote: Compressing objects: 100% (33/33), done.
+remote: Total 41 (delta 5), reused 41 (delta 5), pack-reused 0 (from 0)
+Receiving objects: 100% (41/41), 316.27 KiB | 3.72 MiB/s, done.
+Resolving deltas: 100% (5/5), done.
+
+--------------------------------------------------------------------------------------
+Add "E:\Rahul\git-tutorial\selenium-python-framework" path in
+Environment variables-> System Variables-> PYTHONPATH (which I have created manually)
+Then close command prompt then open again cmd
+Run "echo %PYTHONPATH%"
+
+C:\WINDOWS\system32>echo %PYTHONPATH%
+C:\Users\kumar\PycharmProjects\pythonProject;C:\Users\kumar\PycharmProjects\nopcommerceApp;
+C:\Users\kumar\PycharmProjects\PythonTutorial;
+C:\Python313;C:\Python313\DLLs;C:\Python313\Lib;C:\Python313\libs;C:\Python313\Scripts;
+E:\Rahul\git-tutorial\selenium-python-framework;
+--------------------------------------------------------------------------------------
+
+C:\WINDOWS\system32>E:
+
+E:\>cd E:\Rahul\git-tutorial\selenium-python-framework
+
+-----------------------------------
+Finally run the automation command
+-----------------------------------
+
+E:\Rahul\git-tutorial\selenium-python-framework>py.test -s -v .\tests\test_suite_demo.py --browser Chrome
